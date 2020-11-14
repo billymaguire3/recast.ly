@@ -5,9 +5,9 @@ var VideoList = ({videos, onVideoTitleClick}) => {
 
   return (
     <div className="video-list">
-      { videos.map((video, i) => (
+      { videos.map((video, index) => (
         <VideoListEntry
-          key={video.id.videoId}
+          key={index}
           video={video}
           onVideoTitleClick= {onVideoTitleClick}
         />

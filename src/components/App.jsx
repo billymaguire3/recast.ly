@@ -12,8 +12,8 @@ class App extends React.Component {
       currentVideo: exampleVideoData[0],
       videoList: exampleVideoData
 
-    // this.onVideoTitleClick = this.onVideoTitleClick.bind(this);
-    // this.state = {videoList: props};
+      // this.onVideoTitleClick = this.onVideoTitleClick.bind(this);
+      // this.state = {videoList: props};
     };
   }
 
@@ -32,17 +32,28 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><h5><em>search</em> view goes here</h5></div>
+            <div>
+              <h5>
+              view goes here
+                <em>search</em>
+              </h5>
+            </div>
           </div>
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div><h5><em>videoPlayer</em><VideoPlayer video={this.state.currentVideo}/></h5></div>
+            <div><h5><em>videoPlayer</em><VideoPlayer video={this.state.currentVideo} /></h5></div>
           </div>
           <div className="col-md-5">
-            <div ><h5><em>videoList</em><VideoList
-              onVideoTitleClick={this.onVideoTitleClick.bind(this)}
-              videos={this.state.videoList} /></h5></div>
+            <div>
+              <h5>
+                <em>videoList</em>
+                <VideoList
+                  onVideoTitleClick={this.onVideoTitleClick.bind(this)}
+                  videos={this.state.videoList}
+                />
+              </h5>
+            </div>
           </div>
         </div>
       </div>
@@ -50,34 +61,6 @@ class App extends React.Component {
   }
 }
 export default App;
-
-// window.App = App;
-
-
-
-// when clicked, adds the video cliked to the VideoPLayer
-// currentVideo = this.state.currentVideo;
-
-
-// create a object
-// change currentVideo to the one that is clicked
-
-
-// var currentVideo = this.state.videoList[0];
-
-// for (var i = 1; i < this.state.videoList.length; i++) {
-//   // console.log('VideoListEntry #' + i + this.state.videoList[i].snippet.title);
-//   // console.log('Video Title Clicked ' + this.state.currentVideosTitle);
-//   // check if each title in video list matches the title that was clicked
-//   if (this.state.videoList[i].snippet.title === this.state.currentVideosTitle) {
-//     currentVideo = this.state.videoList[i];
-//   }
-// }
-
-
-
-
-
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
